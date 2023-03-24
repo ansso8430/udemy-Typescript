@@ -1,11 +1,18 @@
-function add(n1, n2) {
-    console.log(typeof number1);
-    if (typeof n1 !== 'number' || typeof n2 !== 'number') {
-        throw new Error('Incorrect input!');
+function add(n1, n2, showResult, phrase) {
+    // typescript 이미 에러 > 필요없는 에러코드
+    // if(typeof n1 !=='number' || typeof n2 !== 'number'){
+    //     throw new Error('Incorrect input!')
+    // }
+    var result = n1 + n2;
+    if (showResult) {
+        console.log(phrase + result);
     }
-    return n1 + n2;
+    else {
+        return result;
+    }
 }
-var number1 = '5';
+var number1 = 5; // 5.0 float
 var number2 = 2.8;
-var result = add(number1, number2);
-console.log(result);
+var printResult = true;
+var resultPhrase = 'Result is: ';
+add(number1, number2, printResult, resultPhrase);
