@@ -22,7 +22,7 @@ favoriteActivites = ['Sports'];
 // const READ_ONLY = 1;
 // const AUTHOR = 2;
 
-enum Role { ADMIN, READ_ONLY, AUTHOR};
+enum Role { ADMIN = 5, READ_ONLY, AUTHOR};
 
 const person = {
     name: 'so',
