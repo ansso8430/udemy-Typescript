@@ -1,4 +1,3 @@
-const userName = "so";
-userName = 3;
+const userNamee = "so";
 
-console.log(userName);
+console.log(userNamee);
