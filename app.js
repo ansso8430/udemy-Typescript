@@ -1,19 +1,11 @@
-function add(n1, n2) {
-    return n1 + n2;
+var userInput;
+var userName;
+userInput = 5;
+userInput = "so";
+if (typeof userInput === "string") {
+    userName = userInput;
 }
-function printResult(num) {
-    console.log("Result: " + num);
+function generateError(message, code) {
+    throw { message: message, errorCode: code };
 }
-function addAndHandle(n1, n2, cb) {
-    var result = n1 + n2;
-    cb(result);
-}
-printResult(add(15, 2)); // Result: 17
-var combineValues;
-// combineValues = 5;
-// combineValues = printResult;
-combineValues = add;
-console.log(combineValues(8, 8));
-addAndHandle(10, 20, function (result) {
-    console.log(result);
-});
+generateError("An error occurred", 50);
