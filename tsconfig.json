@@ -106,16 +106,18 @@
     /* Completeness */
     // "skipDefaultLibCheck": true,                      /* Skip type checking .d.ts files that are included with TypeScript. */
     "skipLibCheck": true /* Skip type checking all .d.ts files. */
-  }
-  // "exclude": [
-  //   // 전체 프로젝트에 대해 tsc를 실행할 때 컴파일시 포함되어서는 안 되는 파일...
-  //   "node_modules" // would be the default
-  // ],
+  },
+  "exclude": [
+    // 전체 프로젝트에 대해 tsc를 실행할 때 컴파일시 포함되어서는 안 되는 파일...
+    // "node_modules" // would be the default
+    "./01",
+    "./02",
+    "./03"
+  ]
   // "include": [
   //   // 여기에 포함되지 않은 파일은 컴파일시 제외
-  //   "app.ts",
-  //   "analytics.ts"
-  // ],
+  //   "./src"
+  // ]
   // "files": [
   //   "app.ts"
   // ]
