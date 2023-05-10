@@ -100,3 +100,17 @@ function moveAnimal(animal: Animal) {
 }
 
 moveAnimal({ type: "bird", flyingSpeed: 10 });
+
+// const pragraph = document.querySelector("p");
+const pragraph = document.getElementById("message-output");
+// const userInputElement = <HTMLInputElement>document.getElementById("user-input")!;
+// const userInputElement = document.getElementById("user-input")! as HTMLInputElement;
+
+// userInputElement.value = "Hi there!";
+
+// ! 안쓸때 >> null이 아님을 증명
+const userInputElement = document.getElementById("user-input");
+
+if (userInputElement) {
+  (userInputElement as HTMLInputElement).value = "Hi there!";
+}
