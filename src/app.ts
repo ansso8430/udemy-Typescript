@@ -23,7 +23,10 @@ type Numeric = number | boolean;
 
 type Universal = Combinable & Numeric;
 
+// 오버로드
 function add(a: number, b: number): number;
+function add(a: string, b: string): string;
+
 function add(a: Combinable, b: Combinable) {
   // type guard
   if (typeof a === "string" || typeof b === "string") {
@@ -34,6 +37,23 @@ function add(a: Combinable, b: Combinable) {
 
 const result = add("hi", " soheee");
 result.split("");
+
+const fetchedUserData = {
+  id: "hi",
+  name: "sohee",
+  job: { title: "CEO", description: "My own company" },
+};
+
+console.log(fetchedUserData.job && fetchedUserData.job.title);
+// optional chaining
+console.log(fetchedUserData?.job?.title);
+
+const userInput = '';
+
+const storedData = userInput ? 'DEFAULT';
+
+console.log(storedData);
+
 
 // type UnknownEmployee = Employee | Admin;
 
